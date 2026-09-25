@@ -1,0 +1,4 @@
+name: xilian_splitter
+desc: 昔涟的「一句一句说」——把一条长回复切成几段短消息，一段一段发出去。参考 nuomicici/astrbot_plugin_splitter 的思路重写：先按句末标点切细、再合并到合适长度，代码块 / <think> / Markdown 表格 / 成对符号内部都不切，图片和表情跟着上一段走；段与段之间按下一段字数等一会儿，模拟打字的节奏。拦点在 on_decorating_result 且排在最后，前几段自己发出、最后一段留给框架，所以引用、转发、文本转图片这些装饰不受影响。和 xilian_tts 配合：默认（full）文字照拆、语音只出一条完整的——分段喂给 xilian_tts 逐段判语气再拼起来，所以文字是一句一句的、声音是一个人在说；也可以设成每段各配一条语音（seg）、只发文字（text）或不拆（skip）。指令 /分段
+version: 1.1.0
+author: 昔涟

@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>昔涟的小本本 · agent 执行面板</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header class="head">
+        <div class="head-main">
+          <h1>昔涟的小本本</h1>
+          <p class="sub">agent 每一次动手都记在这里：做了什么、风险多大、结果怎样 ♪</p>
+        </div>
+        <div class="head-side">
+          <span id="guard-badge" class="badge">管家状态读取中…</span>
+          <span id="tools-badge" class="badge">工具闸读取中…</span>
+          <button id="refresh" class="btn ghost" type="button">刷新</button>
+          <label class="switch">
+            <input id="auto" type="checkbox" checked />
+            <span>自动刷新</span>
+          </label>
+        </div>
+      </header>
+
+      <section class="stats">
+        <button class="stat" data-level="" type="button">
+          <span class="num" id="stat-total">0</span>
+          <span class="cap">动作总数</span>
+        </button>
+        <button class="stat" data-level="blocked" type="button">
+          <span class="num" id="stat-blocked">0</span>
+          <span class="cap">已拦截</span>
+        </button>
+        <button class="stat" data-level="warn" type="button">
+          <span class="num" id="stat-warn">0</span>
+          <span class="cap">需要留意</span>
+        </button>
+        <button class="stat" data-level="safe" type="button">
+          <span class="num" id="stat-safe">0</span>
+          <span class="cap">只读动作</span>
+        </button>
+        <button class="stat" data-level="guard" type="button">
+          <span class="num" id="stat-guard">0</span>
+          <span class="cap">放行拦截记录</span>
+        </button>
+      </section>
+
+      <section class="meta">
+        <span id="meta-mode">范围：—</span>
+        <span id="meta-allow">名单：—</span>
+        <span id="meta-run">最近一次本机动作：—</span>
+        <span id="meta-file">流水文件：—</span>
+      </section>
+
+      <section class="filters">
+        <div class="chips" id="level-chips">
+          <button class="chip on" data-level="" type="button">全部</button>
+          <button class="chip" data-level="blocked" type="button">已拦截</button>
+          <button class="chip" data-level="warn" type="button">注意</button>
+          <button class="chip" data-level="safe" type="button">低风险</button>
+        </div>
+        <select id="kind-filter" title="按类型过滤">
+          <option value="">全部类型</option>
+          <option value="tool">工具动作</option>
+          <option value="guard">名单拦截</option>
+          <option value="notice">面板记录</option>
+        </select>
+        <select id="tool-filter" title="按工具过滤">
+          <option value="">全部工具</option>
+          <option value="xilian_agent_shell">本机命令</option>
+          <option value="xilian_agent_dsh">DSH</option>
+          <option value="xilian_agent_cyrene">Cyrene</option>
+          <option value="xilian_agent_guard">管家拦截</option>
+          <option value="xilian_agent_panel">面板</option>
+        </select>
+        <input id="search" type="search" placeholder="搜命令、QQ 号、输出…" />
+      </section>
+
+      <section id="list" class="list"></section>
+
+      <p id="empty" class="empty" hidden>
+        还没有流水呢。让名单里的人叫昔涟跑一条命令，这里就会亮起来 ♪
+      </p>
+      <p id="error" class="error" hidden></p>
+
+      <footer class="foot">
+        <span id="foot-note">—</span>
+        <span class="foot-actions">
+          <span id="updated" class="updated"></span>
+          <button id="clear" class="btn danger" type="button">清空流水</button>
+        </span>
+      </footer>
+    </div>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

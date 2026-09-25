@@ -1,0 +1,4 @@
+name: xilian_agent
+desc: 昔涟的管家——只让名单里的 QQ 用 AstrBot 的 Agent 能力。名单外的人照常聊天，但模型这次看不到任何工具。名单里的人还能让昔涟跑本机 shell/cmd、调 DSH（Deepseek Harness）、走 Cyrene 本机桥（http://127.0.0.1:8792）操作本机；开口时会自动补一段「本机能力已开通」的系统提示，免得模型推辞不调。自带一块执行流水面板，每一步动作与风险都看得见
+version: 1.5.0
+author: 昔涟

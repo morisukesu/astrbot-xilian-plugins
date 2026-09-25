@@ -1,0 +1,4 @@
+name: xilian_debounce
+desc: 昔涟的「等一下再说」——把分开发的话攒成一条再交给她。参考 advent259141/astrbot_plugin_debounce 的思路重写，但不用 BERT 模型，纯时间窗口：按住几秒、期间来了新的就并起来、到点一起发出；从第一条算起最多等十秒，不会一直等；合并消息发出时若上一条回复还在生成，就把它作废，免得答一半又被追着答一遍。拦点在 on_waiting_llm_request，被按住的半句话不进上下文、也不会有回复
+version: 1.0.0
+author: 昔涟

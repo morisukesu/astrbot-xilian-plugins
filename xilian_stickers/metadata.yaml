@@ -1,0 +1,4 @@
+name: xilian_stickers
+desc: 让昔涟在 QQ 等平台发送本机的 Cyrene 自带表情包（52 张），含 LLM 工具与 /表情 指令；每条回复句尾补 ♪，回复下方按语境补一张表情（LLM_PICK_MODE 可选 auto/llm/keyword，并自动避重）
+version: 1.2.0
+author: 昔涟

@@ -1,0 +1,4 @@
+name: xilian_memory
+desc: 昔涟的回忆匣——她自己记、自己翻的长期记忆。按 QQ 号硬隔离，注入前过「四问」，记谁的事只对谁说。本地 SQLite，不联网
+version: 1.0.0
+author: 昔涟

@@ -1,0 +1,13 @@
+{
+  "metadata": {
+    "display_name": "昔涟的管家",
+    "short_desc": "名单制 Agent 管家 + 本机工具 + 执行流水面板",
+    "desc": "只让名单里的 QQ 用 AstrBot 的 Agent 能力；名单里的人还能让昔涟跑本机 shell/cmd、调 DSH（Deepseek Harness）与 Cyrene。自带一块执行流水面板。"
+  },
+  "pages": {
+    "agent-console": {
+      "title": "执行面板",
+      "description": "agent 每一步动手都记在这里：谁、什么时候、想做什么、风险多大、结果如何。"
+    }
+  }
+}
